@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2606A5A7257B60721B3281 /* libPods-HLPlayerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EF0A65191EE53B1C54D69B /* libPods-HLPlayerDemo.a */; };
 		82BEFA3A20D9EFAF009AD78E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA3920D9EFAF009AD78E /* AppDelegate.m */; };
 		82BEFA3D20D9EFAF009AD78E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA3C20D9EFAF009AD78E /* ViewController.m */; };
 		82BEFA4020D9EFAF009AD78E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BEFA3E20D9EFAF009AD78E /* Main.storyboard */; };
@@ -15,6 +16,16 @@
 		82BEFA4820D9EFB1009AD78E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA4720D9EFB1009AD78E /* main.m */; };
 		82BEFA5220D9EFB1009AD78E /* HLPlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA5120D9EFB1009AD78E /* HLPlayerDemoTests.m */; };
 		82BEFA5D20D9EFB2009AD78E /* HLPlayerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA5C20D9EFB2009AD78E /* HLPlayerDemoUITests.m */; };
+		82BEFA7120DA104C009AD78E /* HLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA7020DA104C009AD78E /* HLPlayerView.m */; };
+		82BEFA7420DA108A009AD78E /* HLPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA7320DA108A009AD78E /* HLPlayerControlView.m */; };
+		82BEFA7720DA10F8009AD78E /* HLPlayerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA7620DA10F8009AD78E /* HLPlayerActivity.m */; };
+		82BEFA7A20DA1150009AD78E /* HLPlayerPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFA7920DA1150009AD78E /* HLPlayerPlaceholderView.m */; };
+		82BEFB0920DA24D3009AD78E /* HLPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 82BEFB0820DA24D3009AD78E /* HLPlayer.bundle */; };
+		82BEFB0C20DA24F1009AD78E /* loadinglogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEFB0A20DA24F1009AD78E /* loadinglogo@3x.png */; };
+		82BEFB0D20DA24F1009AD78E /* loadinglogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEFB0B20DA24F1009AD78E /* loadinglogo.png */; };
+		82BEFB1020DA25EC009AD78E /* HLBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFB0F20DA25EC009AD78E /* HLBrightnessView.m */; };
+		82BEFB1520DA2656009AD78E /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFB1220DA2656009AD78E /* ASValueTrackingSlider.m */; };
+		82BEFB1620DA2656009AD78E /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFB1420DA2656009AD78E /* ASValuePopUpView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D3A06176B366D7FBD2EADF4 /* Pods-HLPlayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLPlayerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLPlayerDemo/Pods-HLPlayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		82BEFA3520D9EFAF009AD78E /* HLPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BEFA3820D9EFAF009AD78E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82BEFA3920D9EFAF009AD78E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +63,27 @@
 		82BEFA5820D9EFB2009AD78E /* HLPlayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLPlayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BEFA5C20D9EFB2009AD78E /* HLPlayerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerDemoUITests.m; sourceTree = "<group>"; };
 		82BEFA5E20D9EFB2009AD78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BEFA6D20DA0FDD009AD78E /* HLPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayer.h; sourceTree = "<group>"; };
+		82BEFA6F20DA104C009AD78E /* HLPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerView.h; sourceTree = "<group>"; };
+		82BEFA7020DA104C009AD78E /* HLPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerView.m; sourceTree = "<group>"; };
+		82BEFA7220DA108A009AD78E /* HLPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerControlView.h; sourceTree = "<group>"; };
+		82BEFA7320DA108A009AD78E /* HLPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerControlView.m; sourceTree = "<group>"; };
+		82BEFA7520DA10F8009AD78E /* HLPlayerActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerActivity.h; sourceTree = "<group>"; };
+		82BEFA7620DA10F8009AD78E /* HLPlayerActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerActivity.m; sourceTree = "<group>"; };
+		82BEFA7820DA1150009AD78E /* HLPlayerPlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerPlaceholderView.h; sourceTree = "<group>"; };
+		82BEFA7920DA1150009AD78E /* HLPlayerPlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerPlaceholderView.m; sourceTree = "<group>"; };
+		82BEFAD720DA1ECB009AD78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BEFB0820DA24D3009AD78E /* HLPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HLPlayer.bundle; sourceTree = "<group>"; };
+		82BEFB0A20DA24F1009AD78E /* loadinglogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadinglogo@3x.png"; sourceTree = "<group>"; };
+		82BEFB0B20DA24F1009AD78E /* loadinglogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadinglogo.png; sourceTree = "<group>"; };
+		82BEFB0E20DA25EC009AD78E /* HLBrightnessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBrightnessView.h; sourceTree = "<group>"; };
+		82BEFB0F20DA25EC009AD78E /* HLBrightnessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBrightnessView.m; sourceTree = "<group>"; };
+		82BEFB1120DA2655009AD78E /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		82BEFB1220DA2656009AD78E /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		82BEFB1320DA2656009AD78E /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		82BEFB1420DA2656009AD78E /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		E56DAF6AA4FAF00078679216 /* Pods-HLPlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLPlayerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLPlayerDemo/Pods-HLPlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E8EF0A65191EE53B1C54D69B /* libPods-HLPlayerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HLPlayerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2606A5A7257B60721B3281 /* libPods-HLPlayerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +112,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DDC4494F63855841A0D34B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D3A06176B366D7FBD2EADF4 /* Pods-HLPlayerDemo.debug.xcconfig */,
+				E56DAF6AA4FAF00078679216 /* Pods-HLPlayerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		82BEFA2C20D9EFAF009AD78E = {
 			isa = PBXGroup;
 			children = (
 				82BEFA3720D9EFAF009AD78E /* HLPlayerDemo */,
 				82BEFA5020D9EFB1009AD78E /* HLPlayerDemoTests */,
 				82BEFA5B20D9EFB2009AD78E /* HLPlayerDemoUITests */,
+				82BEFAD620DA1ECB009AD78E /* HLPlayer */,
 				82BEFA3620D9EFAF009AD78E /* Products */,
+				7DDC4494F63855841A0D34B1 /* Pods */,
+				FA33C712C987AA5EAF023AFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +147,7 @@
 		82BEFA3720D9EFAF009AD78E /* HLPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				82BEFA6E20DA1022009AD78E /* HLPlayerlib */,
 				82BEFA3820D9EFAF009AD78E /* AppDelegate.h */,
 				82BEFA3920D9EFAF009AD78E /* AppDelegate.m */,
 				82BEFA3B20D9EFAF009AD78E /* ViewController.h */,
@@ -132,6 +179,47 @@
 			path = HLPlayerDemoUITests;
 			sourceTree = "<group>";
 		};
+		82BEFA6E20DA1022009AD78E /* HLPlayerlib */ = {
+			isa = PBXGroup;
+			children = (
+				82BEFB0B20DA24F1009AD78E /* loadinglogo.png */,
+				82BEFB0A20DA24F1009AD78E /* loadinglogo@3x.png */,
+				82BEFB0820DA24D3009AD78E /* HLPlayer.bundle */,
+				82BEFA6D20DA0FDD009AD78E /* HLPlayer.h */,
+				82BEFA6F20DA104C009AD78E /* HLPlayerView.h */,
+				82BEFA7020DA104C009AD78E /* HLPlayerView.m */,
+				82BEFA7220DA108A009AD78E /* HLPlayerControlView.h */,
+				82BEFA7320DA108A009AD78E /* HLPlayerControlView.m */,
+				82BEFA7520DA10F8009AD78E /* HLPlayerActivity.h */,
+				82BEFA7620DA10F8009AD78E /* HLPlayerActivity.m */,
+				82BEFA7820DA1150009AD78E /* HLPlayerPlaceholderView.h */,
+				82BEFA7920DA1150009AD78E /* HLPlayerPlaceholderView.m */,
+				82BEFB0E20DA25EC009AD78E /* HLBrightnessView.h */,
+				82BEFB0F20DA25EC009AD78E /* HLBrightnessView.m */,
+				82BEFB1120DA2655009AD78E /* ASValuePopUpView.h */,
+				82BEFB1420DA2656009AD78E /* ASValuePopUpView.m */,
+				82BEFB1320DA2656009AD78E /* ASValueTrackingSlider.h */,
+				82BEFB1220DA2656009AD78E /* ASValueTrackingSlider.m */,
+			);
+			path = HLPlayerlib;
+			sourceTree = "<group>";
+		};
+		82BEFAD620DA1ECB009AD78E /* HLPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				82BEFAD720DA1ECB009AD78E /* Info.plist */,
+			);
+			path = HLPlayer;
+			sourceTree = "<group>";
+		};
+		FA33C712C987AA5EAF023AFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8EF0A65191EE53B1C54D69B /* libPods-HLPlayerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82BEFA6120D9EFB2009AD78E /* Build configuration list for PBXNativeTarget "HLPlayerDemo" */;
 			buildPhases = (
+				EB6DE7788DB951266DA32EB2 /* [CP] Check Pods Manifest.lock */,
 				82BEFA3120D9EFAF009AD78E /* Sources */,
 				82BEFA3220D9EFAF009AD78E /* Frameworks */,
 				82BEFA3320D9EFAF009AD78E /* Resources */,
@@ -235,6 +324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82BEFB0C20DA24F1009AD78E /* loadinglogo@3x.png in Resources */,
+				82BEFB0D20DA24F1009AD78E /* loadinglogo.png in Resources */,
+				82BEFB0920DA24D3009AD78E /* HLPlayer.bundle in Resources */,
 				82BEFA4520D9EFB1009AD78E /* LaunchScreen.storyboard in Resources */,
 				82BEFA4220D9EFB1009AD78E /* Assets.xcassets in Resources */,
 				82BEFA4020D9EFAF009AD78E /* Main.storyboard in Resources */,
@@ -257,12 +349,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB6DE7788DB951266DA32EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HLPlayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82BEFA3120D9EFAF009AD78E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				82BEFA3D20D9EFAF009AD78E /* ViewController.m in Sources */,
+				82BEFB1620DA2656009AD78E /* ASValuePopUpView.m in Sources */,
+				82BEFA7720DA10F8009AD78E /* HLPlayerActivity.m in Sources */,
+				82BEFA7120DA104C009AD78E /* HLPlayerView.m in Sources */,
+				82BEFA7A20DA1150009AD78E /* HLPlayerPlaceholderView.m in Sources */,
+				82BEFA7420DA108A009AD78E /* HLPlayerControlView.m in Sources */,
+				82BEFB1520DA2656009AD78E /* ASValueTrackingSlider.m in Sources */,
+				82BEFB1020DA25EC009AD78E /* HLBrightnessView.m in Sources */,
 				82BEFA4820D9EFB1009AD78E /* main.m in Sources */,
 				82BEFA3A20D9EFAF009AD78E /* AppDelegate.m in Sources */,
 			);
@@ -431,10 +551,11 @@
 		};
 		82BEFA6220D9EFB2009AD78E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D3A06176B366D7FBD2EADF4 /* Pods-HLPlayerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6CUR897C43;
+				DEVELOPMENT_TEAM = 669UDNZ7MP;
 				INFOPLIST_FILE = HLPlayerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,10 +569,11 @@
 		};
 		82BEFA6320D9EFB2009AD78E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56DAF6AA4FAF00078679216 /* Pods-HLPlayerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6CUR897C43;
+				DEVELOPMENT_TEAM = 669UDNZ7MP;
 				INFOPLIST_FILE = HLPlayerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
