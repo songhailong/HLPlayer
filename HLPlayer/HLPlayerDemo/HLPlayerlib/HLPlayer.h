@@ -8,6 +8,17 @@
 
 #ifndef HLPlayer_h
 #define HLPlayer_h
+
+// 监听TableView的contentOffset
+#define kZFPlayerViewContentOffset          @"contentOffset"
+// player的单例
+#define ZFPlayerShared                      [HLBrightnessView sharedBrightnessView]
+
+// 屏幕的宽
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+// 屏幕的高
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+
 // 颜色值RGB
 #define HLColor(r,g,b,a)                       [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 

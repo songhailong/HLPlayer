@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HLPlayerPlaceholderView : UIView
+/**占位视图*/
+@property(nonatomic,strong)UIView *  placeholderView;
 
+/**占位视图*/
+@property(nonatomic,strong)UIImageView *  placeholderImageView;
+
+@property(nonatomic,strong)UILabel * textLable;
 @end
