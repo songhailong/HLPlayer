@@ -112,7 +112,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self == [super initWithFrame:frame]) {
         //TODO 初始化
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor blackColor];
         
         [self initProgressBar];
     }
@@ -183,7 +183,7 @@
 - (void)startAnimating{
     NSLog(@"%f--动画开始的中心点=%f",self.centerPoint.x,self.centerPoint.y);
     
-    
+    self.hidden=NO;
     [self startOneBallAnimator];
     [self startTwoBallAnimator];
 }
@@ -313,9 +313,13 @@
 
 
 -(void)stopAnimating{
+    NSLog(@"=========停止动画===========");
     //清空所有属性
     self.transform=CGAffineTransformIdentity;
-    //[self removeFromSuperview];
+    [self.oneLayer removeAllAnimations];
+    [self.twoLayer removeAllAnimations];
+    self.hidden=YES;
+   // [self removeFromSuperview];
 }
 
 @end

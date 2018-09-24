@@ -77,7 +77,7 @@ typedef void(^SliderTapBlock)(CGFloat value);
 /** 切换分辨率的block */
 @property (nonatomic, copy  ) ChangeResolutionBlock             resolutionBlock;
 /** slidertap事件Block */
-@property (nonatomic, copy  ) SliderTapBlock                    tapBlock;
+@property (nonatomic, copy  ) SliderTapBlock   tapBlock;
 
 
 @property(nonatomic,assign)id<HLPlayerControlDelegat> delegate;

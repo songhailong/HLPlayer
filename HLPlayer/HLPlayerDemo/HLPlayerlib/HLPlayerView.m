@@ -285,10 +285,10 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
         //提供层内容的对象，通常是CGImageRef，但可能是别的原因。例如，NSImage对象是
         
         
-        //self.layer.contents = (id) image.CGImage;
-        self.placeholderView.frame=self.bounds;
+        self.layer.contents = (id) image.CGImage;
+       // self.placeholderView.frame=self.bounds;
         NSLog(@"设置url");
-        self.layer.contents=self.placeholderView;
+        //self.layer.contents=self.placeholderView;
     }
     
     // 每次加载视频URL都设置重播为NO
@@ -386,6 +386,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     self.tap.delaysTouchesBegan = YES;
     [self.tap requireGestureRecognizerToFail:self.doubleTap];
 }
+
 - (void)createTimer
 {
     __weak typeof(self) weakSelf = self;
@@ -580,7 +581,11 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
         //计算出拖动的当前秒数
         NSInteger dragedSeconds = floorf(total * value);
         weakSelf.controlView.startBtn.selected = YES;
-        //[weakSelf seekToTime:dragedSeconds completionHandler:^(BOOL finished) {}];
+        
+        
+        NSLog(@"设置了d跳转的时间");
+        
+        [weakSelf seekToTime:dragedSeconds completionHandler:^(BOOL finished) {}];
         
     };
     
@@ -621,7 +626,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     // fix iOS7 crash bug
     [self layoutIfNeeded];
 }
-
+#pragma mark********显示控制层
 /**
  *  显示控制层
  */
@@ -713,7 +718,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
                 
             }
         } else if ([keyPath isEqualToString:@"loadedTimeRanges"]) {
-            
+            //NSLog(@"计算缓冲进度");
             // 计算缓冲进度
             NSTimeInterval timeInterval = [self availableDuration];
             CMTime duration             = self.playerItem.duration;
@@ -738,7 +743,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
             }
             
         } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
-            NSLog(@"缓冲完成");
+            //NSLog(@"缓冲完成");
             // 当缓冲好的时候
             if (self.playerItem.playbackLikelyToKeepUp && self.state == ZFPlayerStateBuffering){
                 self.state = ZFPlayerStatePlaying;
@@ -810,16 +815,35 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
         // seekTime:completionHandler:不能精确定位
         // 如果需要精确定位，可以使用seekToTime:toleranceBefore:toleranceAfter:completionHandler:
         // 转换成CMTime才能给player来控制播放进度
+        NSLog(@"返回时间");
         CMTime dragedCMTime = CMTimeMake(dragedSeconds, 1);
-        [self.player seekToTime:dragedCMTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-            // 视频跳转回调
+        [self.player seekToTime:dragedCMTime completionHandler:^(BOOL finished) {
             if (completionHandler) { completionHandler(finished); }
             
             [self play];
             self.seekTime = 0;
-            if (!self.playerItem.isPlaybackLikelyToKeepUp && !self.isLocalVideo) { self.state = ZFPlayerStateBuffering; }
+            NSLog(@"是否支持缓冲本地%zd=======%zd",self.isLocalVideo,self.player.currentItem.isPlaybackLikelyToKeepUp);
             
+            if (!self.player.currentItem.isPlaybackLikelyToKeepUp && !self.isLocalVideo) { self.state = ZFPlayerStateBuffering; }
+            
+      
         }];
+        
+        
+        
+        
+//        [self.player seekToTime:dragedCMTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+//            NSLog(@"视频糊掉");
+//            // 视频跳转回调
+//            if (completionHandler) { completionHandler(finished); }
+//            
+//            [self play];
+//            self.seekTime = 0;
+//            NSLog(@"是否支持缓冲本地%zd=======%zd",self.isLocalVideo,self.player.currentItem.isPlaybackLikelyToKeepUp);
+//            
+//            if (!self.player.currentItem.isPlaybackLikelyToKeepUp && !self.isLocalVideo) { self.state = ZFPlayerStateBuffering; }
+//            
+//        }];
     }
 }
 #pragma mark - UIPanGestureRecognizer手势方法
@@ -1058,7 +1082,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
  *  @param state ZFPlayerState
  */
 - (void)setState:(ZFPlayerState)state
-{
+{    NSLog(@"=====状态%zd",state);
     _state = state;
     if (state == ZFPlayerStatePlaying) {
         // 改为黑色的背景，不然站位图会显示
@@ -1068,7 +1092,8 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
         self.controlView.downLoadBtn.enabled = NO;
     }else if (state==ZFPlayerStateFirst){
         self.placeholderView.frame=self.bounds;
-        self.layer.contents =self.placeholderView;
+        //self.layer.contents =self.placeholderView;
+        self.layer.contents=(__bridge id _Nullable)([UIImage imageNamed:self.placeholderImageName].CGImage);
         //NSLog(@"vsacgshvashjcv%@",NSStringFromCGRect( self.placeholderView.frame ));
     }
     // 控制菊花显示、隐藏
@@ -1266,7 +1291,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 
 
 
-#pragma mark - Setter 设置状态的时候 弹框会显示
+#pragma mark - Setter 设置播放视频前的占位图
 
 
 /**
@@ -1280,9 +1305,9 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     if (placeholderImageName) {
         UIImage *image = [UIImage imageNamed:self.placeholderImageName];
         //可以做成动画  层内容属性和方法。* * /提供层内容的对象，通常是CGImageRef，
-        //self.layer.contents = (id) image.CGImage;
+        self.layer.contents = (id) image.CGImage;
         NSLog(@"展位图设备值");
-        self.layer.contents=self.placeholderView;
+        //self.layer.contents=self.placeholderView;
     }else {
         // UIImage *image = ZFPlayerImage(@"ZFPlayer_loading_bgView");
         UIImage *image=[UIImage imageNamed:@"loadinglogo"];

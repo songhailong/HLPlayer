@@ -29,6 +29,7 @@
 		82BEFB1020DA25EC009AD78E /* HLBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFB0F20DA25EC009AD78E /* HLBrightnessView.m */; };
 		82BEFB1520DA2656009AD78E /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFB1220DA2656009AD78E /* ASValueTrackingSlider.m */; };
 		82BEFB1620DA2656009AD78E /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEFB1420DA2656009AD78E /* ASValuePopUpView.m */; };
+		82FE715E2154D85F00C8C792 /* AdvertisingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE715D2154D85F00C8C792 /* AdvertisingAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		82BEFB1220DA2656009AD78E /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
 		82BEFB1320DA2656009AD78E /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
 		82BEFB1420DA2656009AD78E /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		82FE715C2154D85F00C8C792 /* AdvertisingAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvertisingAlertView.h; sourceTree = "<group>"; };
+		82FE715D2154D85F00C8C792 /* AdvertisingAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvertisingAlertView.m; sourceTree = "<group>"; };
 		E56DAF6AA4FAF00078679216 /* Pods-HLPlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLPlayerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLPlayerDemo/Pods-HLPlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E8EF0A65191EE53B1C54D69B /* libPods-HLPlayerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HLPlayerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -323,6 +326,8 @@
 				8228F92D20DB3ACF00598E7A /* HLAdvertisingView.m */,
 				825D1A6E20DCC32400DA93D3 /* HLadvertisingControl.h */,
 				825D1A6F20DCC32400DA93D3 /* HLadvertisingControl.m */,
+				82FE715C2154D85F00C8C792 /* AdvertisingAlertView.h */,
+				82FE715D2154D85F00C8C792 /* AdvertisingAlertView.m */,
 			);
 			path = HLPlayerlib;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FE715E2154D85F00C8C792 /* AdvertisingAlertView.m in Sources */,
 				82BEFA3D20D9EFAF009AD78E /* ViewController.m in Sources */,
 				825D1A7020DCC32400DA93D3 /* HLadvertisingControl.m in Sources */,
 				82BEFB1620DA2656009AD78E /* ASValuePopUpView.m in Sources */,

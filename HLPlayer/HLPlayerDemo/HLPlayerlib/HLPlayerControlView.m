@@ -12,9 +12,11 @@
 #import "HLPlayer.h"
 #import "HLPlayerActivity.h"
 #import "ASValueTrackingSlider.h"
-@interface HLPlayerControlView()
+@interface HLPlayerControlView()<UIGestureRecognizerDelegate>
 /** 分辨率的View */
 @property (nonatomic, strong) UIView                  *resolutionView;
+
+@property(nonatomic,strong)UITapGestureRecognizer *tapGesture;
 @end
 @implementation HLPlayerControlView
 
@@ -79,7 +81,7 @@
     }
     
 }
-
+#pragma mark**********布局
 - (void)makeSubViewsConstraints
 {     //NSLog(@"");
     [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -168,16 +170,7 @@
     }];
     
     [self.activityView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        
-        
-        
         make.center.equalTo(self);
-        
-        //NSLog(@"%f中心=====%f",,make.centerY);
-        
-        
-        
         make.height.mas_equalTo(80);
         make.width.mas_equalTo(80);
     }];
@@ -375,6 +368,10 @@
         [_videoSlider addTarget:self action:@selector(progressSliderTouchBegan:) forControlEvents:UIControlEventTouchDown];
         [_videoSlider addTarget:self action:@selector(progressSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
         [_videoSlider addTarget:self action:@selector(progressSliderTouchEnded:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchCancel | UIControlEventTouchUpOutside];
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSliderAction:)];
+        _tapGesture.delegate = self;
+        [_videoSlider addGestureRecognizer:_tapGesture];
+        
     }
     return _videoSlider;
 }
@@ -409,6 +406,7 @@
         _horizontalLabel.textAlignment   = NSTextAlignmentCenter;
         _horizontalLabel.font            = [UIFont systemFontOfSize:15.0];
         _horizontalLabel.backgroundColor = [UIColor colorWithPatternImage:ZFPlayerImage(@"ZFPlayer_management_mask")];
+        _horizontalLabel.hidden=YES;
     }
     return _horizontalLabel;
 }
@@ -422,8 +420,9 @@
 }
 -(HLPlayerActivity *)activityView{
     if (_activityView==nil) {
-        _activityView=[[HLPlayerActivity  alloc] init];
-        _activityView.activityType=HLActivityTypeUK;
+        _activityView=[[HLPlayerActivity  alloc]initWithFrame:self.frame ActivityType:HLActivityTypeUK];
+        _activityView.activityType=HLActivityTypeAQY;
+        _activityView.backgroundColor=[UIColor clearColor];
     }
     return _activityView;
 }
@@ -433,6 +432,7 @@
         _repeatBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_repeatBtn setImage:ZFPlayerImage(@"ZFPlayer_repeat_video") forState:UIControlStateNormal];
         [_repeatBtn addTarget:self action:@selector(repeatPlay:) forControlEvents:UIControlEventTouchUpInside];
+        _repeatBtn.hidden=YES;
     }
     return _repeatBtn;
 }

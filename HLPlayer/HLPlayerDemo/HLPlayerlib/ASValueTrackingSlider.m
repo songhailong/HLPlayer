@@ -25,6 +25,7 @@
 
 @interface ASValueTrackingSlider() <ASValuePopUpViewDelegate>
 @property (strong, nonatomic) ASValuePopUpView *popUpView;
+@property(nonatomic,strong)UITapGestureRecognizer *tapGesture;
 @property (nonatomic) BOOL popUpViewAlwaysOn; // default is NO
 @end
 
